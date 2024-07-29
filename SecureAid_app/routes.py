@@ -13,7 +13,7 @@ def donate():
         flash('Donation made successfully!', 'success')
         return redirect(url_for('donate'))
     
-    return render_template('donating_page.html', donations=donations)
+    return render_template('donating_page/index.html', donations=donations)
 
 @app.route('/my_donations')
 @login_required
