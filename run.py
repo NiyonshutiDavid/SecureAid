@@ -1,4 +1,4 @@
-from secureAid import app
+from secureAid_app import app
 
 
 if __name__ == '__main__':

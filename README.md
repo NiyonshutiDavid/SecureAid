@@ -1,7 +1,7 @@
-# Eco Clean Solutions
+# Secure Aid
 
 ## Project Overview
-Eco Clean Solutions is an innovative web application that integrates various elements learned throughout the course to create a comprehensive waste management system. The system aims to solve real world problems by enhancing waste collection, recycling, and resource management through intelligent technologies.
+
 
 ## Project Theme: Smart waste management system
 Eco Clean Solutions enables users to manage waste collection schedules and view environmental impact metrics. The system supports three primary user roles:
