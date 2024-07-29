@@ -12,14 +12,14 @@
         <header class="header">
           <div class="overlap-group">
             <div class="nav">
-              <div class="link"><div class="text-wrapper">About</div></div>
-              <div class="div-wrapper"><div class="text-wrapper-2">Nonprofits</div></div>
-              <div class="link-2"><div class="text-wrapper-3">Companies</div></div>
-              <div class="link-3"><div class="text-wrapper-4">Disasters</div></div>
-              <div class="link-4"><div class="text-wrapper-5">Blog</div></div>
+              <a href="about.html" class="link"><div class="text-wrapper">About</div></a>
+              <a href="nonprofits.html" class="div-wrapper"><div class="text-wrapper-2">Nonprofits</div></a>
+              <a href="companies.html" class="link-2"><div class="text-wrapper-3">Companies</div></a>
+              <a href="disasters.html" class="link-3"><div class="text-wrapper-4">Disasters</div></a>
+              <a href="blog.html" class="link-4"><div class="text-wrapper-5">Blog</div></a>
             </div>
             <div class="container">
-              <div class="link-5"><div class="text-wrapper-6">Login</div></div>
+              <a href="login.html" div class="link-5"><div class="text-wrapper-6">Login</div></div></a>
             </div>
             <div class="group">
               <img class="img" src="img/group-1.png" />
@@ -35,18 +35,21 @@
           <div class="heading-login">Login</div>
           <div class="overlap">
             <div class="text-wrapper-8">New to GlobalGiving?</div>
-            <div class="link-6"><div class="text-wrapper-9">Create an account</div></div>
+             <a href="signup page/index.html" class="link-6"><div class="text-wrapper-9">Create an account</div></a>
           </div>
           <div class="form">
-            <div class="label-email">EMAIL</div>
-            <div class="input"></div>
-            <div class="label-password">PASSWORD</div>
-            <div class="input-2"></div>
-            <div class="label">
-              <img class="image-background" src="img/image-background-border.svg" />
-              <div class="text-wrapper-10">Remember me</div>
-            </div>
-            <div class="link-7"><div class="text-wrapper-11">Forgot password?</div></div>
+  <form action="/submit-login" method="post">
+    <div class="label-email">EMAIL</div>
+    <input type="email" id="email" name="email" class="input" required />
+
+    <div class="label-password">PASSWORD</div>
+    <input type="password" id="password" name="password" class="input-2" required />
+
+    <div class="label">
+      <input type="checkbox" id="remember-me" name="remember-me" class="checkbox" />
+      <label for="remember-me" class="text-wrapper-10">Remember me</label>
+    </div>
+            <a href="forgot-password.html" class="link-7"><div class="text-wrapper-11">Forgot password?</div></a>
             <div class="html-wrapper">
               <div class="html">
                 <div class="body">
@@ -81,7 +84,7 @@
             <div class="body-button-table">
               <div class="body-row">
                 <div class="data-png"></div>
-                <div class="data"><div class="text-wrapper-18">Continue with Facebook</div></div>
+                <a href="facebook-login.html" class="data"><div class="text-wrapper-18">Continue with Facebook</div></a>
               </div>
             </div>
           </div>
