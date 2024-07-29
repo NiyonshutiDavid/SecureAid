@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="my-donations">
+        <header>
+            <h1>Your Donations</h1>
+        </header>
+        <ul>
+            {% for order in orders %}
+                <li>
+                    Donation to: {{ order.donation.donation_name }} - Amount: ${{ order.donation_amount }} 
+                    on {{ order.timestamp.strftime('%Y-%m-%d %H:%M') }}
+                </li>
+            {% else %}
+                <li>No donations made yet.</li>
+            {% endfor %}
+        </ul>
+        <footer>
+            <a href="{{ url_for('user_dashboard/index.html') }}">Back to Dashboard</a>
+        </footer>
+    </div>
+</body>
+</html>
