@@ -10,56 +10,58 @@
     <div class="signup">
       <header class="header">
         <div class="container">
-          <div class="link"><div class="text-wrapper">Login</div></div>
+          <a href="login.html" class="link">
+            <div class="text-wrapper">Login</div>
+          </a>
         </div>
         <div class="group">
-          <img class="img" src="img/group-1.png" />
+          <img class="img" src="img/group-1.png" alt="Secure Aid Logo"/>
           <div class="div">Secure Aid</div>
         </div>
         <div class="overlap-group">
           <div class="div-wrapper"><div class="text-wrapper-2">Nonprofits</div></div>
-          <div class="link-2"><div class="text-wrapper-3">About</div></div>
-          <div class="link-3"><div class="text-wrapper-4">Companies</div></div>
-          <div class="link-4"><div class="text-wrapper-5">Disasters</div></div>
+          <a href="about.html" class="link-2"><div class="text-wrapper-3">About</div></a>
+          <a href="companies.html" class="link-3"><div class="text-wrapper-4">Companies</div></a>
+          <a href="disasters.html" class="link-4"><div class="text-wrapper-5">Disasters</div></a>
         </div>
       </header>
       <div class="background-border">
         <div class="heading-create-an">Create an Account</div>
         <div class="overlap">
           <div class="text-wrapper-6">Already have an account?</div>
-          <div class="link-5"><div class="text-wrapper-7">Login</div></div>
+          <a href="login.html" class="link-5">
+            <div class="text-wrapper-7">Login</div>
+          </a>
         </div>
-        <div class="form">
+        <form class="form" action="submit_form.php" method="post">
           <div class="label-first-name">FIRST NAME</div>
-          <div class="input"></div>
+          <input type="text" id="first-name" name="first-name" class="input" required />
           <div class="label-last-name">LAST NAME</div>
-          <div class="input-2"></div>
+          <input type="text" id="last-name" name="last-name" class="input-2" required />
           <div class="label-email">EMAIL</div>
-          <div class="input-3"></div>
+          <input type="email" id="email" name="email" class="input-3" required />
           <div class="label-password">PASSWORD</div>
-          <div class="input-4"></div>
+          <input type="password" id="password" name="password" class="input-4" required />
           <div class="label-confirm">CONFIRM PASSWORD</div>
-          <div class="input-5"></div>
+          <input type="password" id="confirm-password" name="confirm-password" class="input-5" required />
           <div class="label">
-            <div class="background-border-2"></div>
-            <p class="p">Subscribe to our awesome newsletter</p>
+            <input type="checkbox" id="newsletter" name="newsletter" class="checkbox-input" />
+            <label for="newsletter" class="p">Subscribe to our awesome newsletter</label>
           </div>
           <div class="html-wrapper">
             <div class="html">
               <div class="body">
                 <div class="checkbox">
-                  <div class="background-border-wrapper">
-                    <img class="background-border-3" src="img/background-border.png" />
-                  </div>
+                  <img class="background-border-3" src="img/background-border.png" alt="Checkbox Background" />
                 </div>
-                <div class="i-m-not-a-robot">I&#39;m not a robot</div>
-                <img class="image" src="img/image-2.png" />
+                <div class="i-m-not-a-robot">I'm not a robot</div>
+                <img class="image" src="img/image-2.png" alt="reCAPTCHA"/>
                 <div class="text-wrapper-8">reCAPTCHA</div>
                 <div class="background">
-                  <div class="link-6"><div class="text-wrapper-9">Privacy</div></div>
+                  <a href="privacy.html" class="link-6"><div class="text-wrapper-9">Privacy</div></a>
                   <div class="overlap-2">
                     <div class="text-wrapper-10">-</div>
-                    <div class="link-7"><div class="text-wrapper-11">Terms</div></div>
+                    <a href="terms.html" class="link-7"><div class="text-wrapper-11">Terms</div></a>
                   </div>
                 </div>
               </div>
@@ -68,25 +70,27 @@
           <div class="emphasis">
             <div class="overlap-3">
               <p class="text-wrapper-12">Your information is protected by our</p>
-              <div class="link-8"><div class="text-wrapper-13">Privacy Policy</div></div>
+              <a href="privacy-policy.html" class="link-8"><div class="text-wrapper-13">Privacy Policy</div></a>
             </div>
           </div>
-          <button class="button">
+          <button type="submit" class="button">
             <div class="overlap-4">
               <div class="border"></div>
               <div class="button-paints"></div>
               <div class="sign-up">SIGN UP</div>
             </div>
           </button>
-        </div>
+        </form>
         <div class="separator"></div>
         <div class="text-wrapper-14">OR</div>
         <div class="separator-2"></div>
         <div class="iframe-html">
           <div class="body-button-table">
             <div class="body-row">
-              <img class="data-png" src="img/data-u7mawjle6hz-png.png" />
-              <div class="data"><div class="text-wrapper-15">Continue with Facebook</div></div>
+              <img class="data-png" src="img/data-u7mawjle6hz-png.png" alt="Facebook Logo"/>
+              <a href="facebook-login.html" class="data">
+                <div class="text-wrapper-15">Continue with Facebook</div>
+              </a>
             </div>
           </div>
         </div>
@@ -96,7 +100,7 @@
           <div class="background-2">
             <div class="container-2">
               <div class="group-2">
-                <img class="group-3" src="img/group-1-1.png" />
+                <img class="group-3" src="img/group-1-1.png" alt="Secure Aid Logo"/>
                 <div class="text-wrapper-16">Secure Aid</div>
               </div>
               <p class="secure-aid-makes-it">
@@ -107,34 +111,34 @@
                 <div class="overlap-group-2">
                   <div class="border-2"></div>
                   <div class="link-paints"></div>
-                  <div class="help-center">HELP CENTER</div>
+                  <a href="help-center.html" class="help-center">HELP CENTER</a>
                 </div>
               </div>
             </div>
             <div class="horizontal-divider"></div>
             <div class="nav">
               <div class="heading-link"><div class="text-wrapper-17">Donors</div></div>
-              <div class="link-9"><div class="text-wrapper-18">Donate in Honor</div></div>
-              <div class="link-10"><p class="text-wrapper-19">Project of the Month Club</p></div>
-              <div class="link-11"><div class="text-wrapper-20">Start a Fundraiser</div></div>
+              <a href="donate-in-honor.html" class="link-9"><div class="text-wrapper-18">Donate in Honor</div></a>
+              <a href="project-of-the-month-club.html" class="link-10"><p class="text-wrapper-19">Project of the Month Club</p></a>
+              <a href="start-a-fundraiser.html" class="link-11"><div class="text-wrapper-20">Start a Fundraiser</div></a>
               <div class="heading-link-2"><div class="text-wrapper-21">Nonprofits</div></div>
-              <div class="link-12"><div class="text-wrapper-22">Start an Application</div></div>
-              <div class="link-13"><div class="text-wrapper-23">Why Join?</div></div>
-              <div class="link-14"><div class="text-wrapper-24">Handbook</div></div>
+              <a href="start-an-application.html" class="link-12"><div class="text-wrapper-22">Start an Application</div></a>
+              <a href="why-join.html" class="link-13"><div class="text-wrapper-23">Why Join?</div></a>
+              <a href="handbook.html" class="link-14"><div class="text-wrapper-24">Handbook</div></a>
               <div class="pricing-fees-wrapper"><div class="pricing-fees">Pricing &amp; Fees</div></div>
               <div class="heading-link-3"><div class="text-wrapper-25">Companies</div></div>
-              <div class="link-15"><div class="text-wrapper-26">Our Services</div></div>
-              <div class="link-16"><div class="text-wrapper-27">Our Partners</div></div>
-              <div class="link-17"><div class="text-wrapper-28">Corporate Gift Cards</div></div>
-              <div class="link-18"><div class="text-wrapper-29">GlobalGiving Atlas</div></div>
+              <a href="our-services.html" class="link-15"><div class="text-wrapper-26">Our Services</div></a>
+              <a href="our-partners.html" class="link-16"><div class="text-wrapper-27">Our Partners</div></a>
+              <a href="corporate-gift-cards.html" class="link-17"><div class="text-wrapper-28">Corporate Gift Cards</div></a>
+              <a href="globalgiving-atlas.html" class="link-18"><div class="text-wrapper-29">GlobalGiving Atlas</div></a>
               <div class="heading-link-4"><div class="text-wrapper-30">About Us</div></div>
-              <div class="link-19"><div class="text-wrapper-31">Our Team</div></div>
-              <div class="link-20"><div class="text-wrapper-32">Jobs</div></div>
-              <div class="link-21"><div class="text-wrapper-33">FAQs</div></div>
-              <div class="link-22"><div class="text-wrapper-34">Contact Us</div></div>
+              <a href="our-team.html" class="link-19"><div class="text-wrapper-31">Our Team</div></a>
+              <a href="jobs.html" class="link-20"><div class="text-wrapper-32">Jobs</div></a>
+              <a href="faqs.html" class="link-21"><div class="text-wrapper-33">FAQs</div></a>
+              <a href="contact-us.html" class="link-22"><div class="text-wrapper-34">Contact Us</div></a>
               <div class="heading-link-5"><div class="text-wrapper-35">Learn Library</div></div>
-              <div class="link-23"><div class="text-wrapper-36">Nonprofit Resources</div></div>
-              <div class="link-24"><div class="text-wrapper-37">Corporate Giving Resources</div></div>
+              <a href="nonprofit-resources.html" class="link-23"><div class="text-wrapper-36">Nonprofit Resources</div></a>
+
               <div class="link-25"><div class="text-wrapper-38">Donor Resources</div></div>
               <div class="link-26"><div class="text-wrapper-39">Success Stories</div></div>
             </div>
@@ -181,3 +185,4 @@
     </div>
   </body>
 </html>
+
