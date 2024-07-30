@@ -1,18 +1,19 @@
 
-# Secure Aid
-
+Secure Aid
 Welcome to Secure Aid! This web application is dedicated to increasing awareness of the harmful effects of war and facilitating donations to help those in unstable countries. Our mission is to make the process of sending donations easier and more secure, ensuring that aid reaches those who need it most.
 
-## Table of Contents
-
-- [About Secure Aid](#about-secure-aid)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Contact](#contact)
-
+Table of Contents
+About Secure Aid
+Features
+Getting Started
+Installation
+Usage
+Testing
+Deployment
+Contributing
+Code of Conduct
+License
+Contact
 ## About Secure Aid
 
 Secure Aid is an innovative web application designed to:
