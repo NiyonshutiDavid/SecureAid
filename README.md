@@ -90,9 +90,9 @@ To deploy the application, follow these steps:
 
 2. Set up environment variables for production (e.g., database URI, secret keys).
 
-3.link to hosted Secure Aid web Application:
+3.Technology used
    ```bash
-   link
+   render
    ```
 
 4. Configure a web server like Nginx to proxy requests to the Gunicorn server.
