@@ -116,10 +116,6 @@ We welcome contributions to Secure Aid! To contribute:
    ```
 5. Open a pull request.
 
-## Code of Conduct
-
-Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions with the project.
-
 ## Contact
 For any inquiries or issues, please contact us at:
 
@@ -135,3 +131,11 @@ For any inquiries or issues, please contact us at:
 ---
 
 THANK YOU
+
+
+--------------------------------------------------------------------------------------------
+![sc](https://github.com/user-attachments/assets/be3385a1-5538-49f2-853a-ae97811cc376)
+
+
+
+
