@@ -55,6 +55,7 @@ pip
          ```
 
 3. Install the dependencies:
+   ```
  pip install -r requirements.txt
    ```
 
