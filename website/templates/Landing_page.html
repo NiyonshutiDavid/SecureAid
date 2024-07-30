@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='Landing%20page/style.css') }}" />
   </head>
   <style>
+
     @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Krona+One:400|Open+Sans:700,800,400|Aleo:700,400");
 * {
@@ -18,8 +19,52 @@
 }
 html,
 body {
+  line-height: 1.6;
+  padding: 0;
   margin: 0px;
   height: 100%;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Example: Styling for tablets and larger screens */
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* Example: Styling for desktops and larger screens */
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Example: Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Example: Responsive navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
 }
 /* a blue color as a generic focus style */
 button:focus-visible {
@@ -3481,24 +3526,24 @@ a {
       <div class="div">
         <header class="header">
           <div class="group">
-		  <img class="img" src="{{ url_for('static', filename='Lanign page/img/group-1.png') }}" />
+		  <img class="img" src="img/group-1.png') }}" />
             <div class="text-wrapper">Secure Aid</div>
           </div>
           <div class="overlap-group">
             <div class="container">
-		    <img class="search-orange-svg" src="{{ url_for('static', filename='Landing page/img/search-orange-svg.svg') }}" />
-              <div class="link"><a href="login_page/index.html" class="donate-to-projects">DONATE TO PROJECTS</a></div>
+		    <img class="search-orange-svg" src="{{ url_for('static', filename='Landing%20page/img/search-orange-svg.svg') }}" />
+              <div class="link"><a href="login_page.html" class="donate-to-projects">DONATE TO PROJECTS</a></div>
             </div>
             <div class="nav">
-              <div class="div-wrapper"><div class="text-wrapper-2">About</div></div>
-              <div class="link-2"><div class="text-wrapper-3">Nonprofits</div></div>
-              <div class="link-3"><div class="text-wrapper-4">Companies</div></div>
-              <div class="link-4"><div class="text-wrapper-5">Disasters</div></div>
-              <div class="link-5"><div class="text-wrapper-6">Blog</div></div>
+              <div class="div-wrapper"><a href="#" class="text-wrapper-2">About</a></div>
+              <div class="link-2"><a href="#" class="text-wrapper-3">Nonprofits</a></div>
+              <div class="link-3"><a href="#" class="text-wrapper-4">Companies</a></div>
+              <div class="link-4"><a href="#" class="text-wrapper-5">Disasters</a></div>
+              <div class="link-5"><a href="#" class="text-wrapper-6">Blog</div></a>
             </div>
           </div>
           <div class="link-wrapper">
-            <div class="link-6"><div class="text-wrapper-7">Login</div></div>
+            <div class="link-6"><a href="#" class="text-wrapper-7">Login</a></div>
           </div>
         </header>
         <div class="overlap">
@@ -3555,17 +3600,17 @@ a {
         </div>
         <div class="background-6">
           <div class="explore-projects">EXPLORE PROJECTS:</div>
-          <div class="link-13"><div class="text-wrapper-12">Featured</div></div>
-          <div class="link-14"><div class="text-wrapper-13">Newest</div></div>
-          <div class="link-15"><div class="text-wrapper-14">Nearly Funded</div></div>
-          <div class="link-16"><div class="text-wrapper-15">Child Protection</div></div>
-          <div class="link-17"><div class="text-wrapper-16">Disaster Response</div></div>
-          <div class="link-18"><div class="text-wrapper-17">Education</div></div>
-          <div class="link-19"><div class="text-wrapper-18">Climate Action</div></div>
-          <div class="link-20"><div class="text-wrapper-19">Food Security</div></div>
-          <div class="link-21"><div class="text-wrapper-20">Gender Equality</div></div>
-          <div class="link-22"><div class="text-wrapper-21">Physical Health</div></div>
-          <div class="see-all-wrapper"><div class="see-all">SEE ALL ›</div></div>
+          <div class="link-13"><a href="#" class="text-wrapper-12">Featured</a></div>
+          <div class="link-14"><a href="login_page.html" class="text-wrapper-13">Newest</a></div>
+          <div class="link-15"><a href="login_page.html" class="text-wrapper-14">Nearly Funded</a></div>
+          <div class="link-16"><a href="login_page.html" class="text-wrapper-15">Child Protection</a></div>
+          <div class="link-17"><a href="login_page.html" class="text-wrapper-16">Disaster Response</a></div>
+          <div class="link-18"><a href="login_page.html" class="text-wrapper-17">Education</div></a>
+          <div class="link-19"><a href="login_page.html" class="text-wrapper-18">Climate Action</a></div>
+          <div class="link-20"><a href="login_page.html" class="text-wrapper-19">Food Security</a></div>
+          <div class="link-21"><a href="login_page.html" class="text-wrapper-20">Gender Equality</a></div>
+          <div class="link-22"><a href="login_page.html" class="text-wrapper-21">Physical Health</a></div>
+          <div class="see-all-wrapper"><a href="login_page.html" class="see-all">SEE ALL ›</div></a>
         </div>
         <div class="overlap-3">
           <div class="section">
@@ -3647,7 +3692,7 @@ a {
           </div>
           <div class="link-29">
             <div class="border-3"></div>
-            <div class="learn-more">LEARN MORE</div>
+            <div href="login_page.html" class="learn-more">LEARN MORE</div>
           </div>
         </div>
         <div class="section-4">
@@ -3666,7 +3711,7 @@ a {
           </div>
           <div class="link-30">
             <div class="border-4"></div>
-            <div class="learn-more">LEARN MORE</div>
+            <div href="#" class="learn-more">LEARN MORE</div>
           </div>
           <div class="container-3">
             <div class="overlap-group-wrapper">
@@ -3729,7 +3774,7 @@ a {
               <div class="overlap-group-3">
                 <div class="border-5"></div>
                 <div class="link-paints"></div>
-                <div class="view-all-companies">VIEW ALL COMPANIES</div>
+                <div href="#" class="view-all-companies">VIEW ALL COMPANIES</div>
               </div>
             </div>
             <img class="image" src="img/image-1.png" />
@@ -3746,7 +3791,7 @@ a {
                   >On July Bonus Day, $100+ gifts get a match.<br />Bigger gifts, bigger matches!</span
                 >
               </p>
-              <div class="give-now">GIVE NOW   ›</div>
+              <div href="login_page.html" class="give-now">GIVE NOW   ›</div>
             </div>
           </div>
           <div class="link-37">
