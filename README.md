@@ -90,9 +90,9 @@ To deploy the application, follow these steps:
 
 2. Set up environment variables for production (e.g., database URI, secret keys).
 
-3. Use a WSGI server like Gunicorn to serve the application:
+3.link to hosted Secure Aid web Application:
    ```bash
-   gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
+   link
    ```
 
 4. Configure a web server like Nginx to proxy requests to the Gunicorn server.
@@ -129,7 +129,8 @@ For any inquiries or issues, please contact us at:
     - n.iyabikoze@alustudent.com
     - n.marizani@alustudent.com
     - y.molumo@alustudent.com
-- GitHub: [Secure Aid](https://github.com/NiyonshutiDavid/SecureAid)
+   
+   GitHub: [Secure Aid](https://github.com/NiyonshutiDavid/SecureAid)
 
 ---
 
