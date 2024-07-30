@@ -23,7 +23,7 @@ def login():
         else:
             flash('Login failed. Check your email and password.', category='error')
 
-    return render_template("login_page/index.html", form=form, user=current_user)
+    return render_template("login_page.html", form=form, user=current_user)
 
 @auth.route('/logout')
 @login_required
@@ -52,5 +52,12 @@ def sign_up():
             flash('Account created!', category='success')
             return redirect(url_for('views.user_dashboard'))
 
-    return render_template("signup page/index.html", form=form, user=current_user)
+    return render_template("signup_page.html", form=form, user=current_user)
+    
+    
+@auth.before_app_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
 

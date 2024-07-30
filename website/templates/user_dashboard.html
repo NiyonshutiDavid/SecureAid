@@ -13,11 +13,46 @@
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
 html,
 body {
   margin: 0px;
   height: 100%;
 }
+
+/* Ensure that the maximum width of the container is 100% */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensure that the maximum width of the container is 100% on all devices */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 /* a blue color as a generic focus style */
 button:focus-visible {
   outline: 2px solid #4a90e2 !important;
@@ -309,7 +344,7 @@ a {
   background-color: #ebeeee;
 }
 
-.home .form {
+.home .formming {
   position: absolute;
   width: 1231px;
   height: 146px;
@@ -2289,7 +2324,7 @@ a {
   left: 866px;
   border: 1px solid;
   border-color: #f08b1d;
-  background-image: url(./img/image-fill.svg);
+  background-image: url(/static/img/image-fill.svg);
   background-size: 100% 100%;
 }
 
@@ -2321,12 +2356,12 @@ a {
       <div class="div">
         <header class="header">
           <div class="group">
-            <img class="img" src="img/group-1.png" />
+            <img class="img" src="{{ url_for('static', filename='img/group-1.png') }}" />
             <div class="text-wrapper">Secure Aid</div>
           </div>
           <div class="container">
-            <img class="search-orange-svg" src="img/search-orange-svg.svg" />
-            <div class="link"><div class="donate-to-projects">DONATE TO PROJECTS</div></div>
+            <img class="search-orange-svg" src="{{ url_for('static', filename='img/search-orange-svg.svg') }}" />
+            <div class="link"><a href="{{ url_for('views.donation')}}"><div class="donate-to-projects">DONATE TO PROJECTS</div></a></div>
           </div>
           <div class="nav">
             <div class="div-wrapper"><div class="text-wrapper-2">About</div></div>
@@ -2335,33 +2370,11 @@ a {
             <div class="link-4"><div class="text-wrapper-5">Disasters</div></div>
             <div class="link-5"><div class="text-wrapper-6">Blog</div></div>
           </div>
-          <img class="link-6" src="img/link.svg" />
+          <img class="link-6" src="{{ url_for('static', filename='img/link.svg') }}" />
           <div class="horizontal-divider"><div class="separator"></div></div>
         </header>
         <div class="section-wrapper">
           <div class="section">
-            <div class="form">
-              <div class="overlap">
-                <div class="help-center-wrapper"><div class="help-center">HELP CENTER</div></div>
-                <div class="input">
-                  <div class="container-2"><div class="text-wrapper-7">Yusuf Molumo</div></div>
-                </div>
-              </div>
-              <img class="group-2" src="img/group-1-1.png" />
-              <div class="container-wrapper">
-                <input class="container-3" placeholder="ykmolumo@gmail.com" type="email" />
-              </div>
-              <div class="input-2">
-                <div class="container-4"><div class="text-wrapper-8">location unknown</div></div>
-              </div>
-              <div class="overlap-group-wrapper">
-                <div class="overlap-group">
-                  <div class="border"></div>
-                  <div class="link-paints"></div>
-                  <div class="edit-info">EDIT INFO</div>
-                </div>
-              </div>
-            </div>
             <div class="link-7">
               <div class="background"><div class="border-2"></div></div>
               <div class="my-account">MY ACCOUNT</div>
@@ -2383,13 +2396,13 @@ a {
               <div class="text-wrapper-9">API</div>
             </div>
             <div class="background-border">
-              <img class="image" src="img/image.png" />
+              <img class="image" src="{{ url_for('static', filename='img/image.png') }}" />
               <p class="make-a-bigger-impact">
-                Make a bigger impact on more<br />projects with our Project of the<br />Month Club
+                Make a bigger impact on more projects with our Project of the Month Club
               </p>
               <div class="link-12">
                 <div class="border-3"></div>
-                <div class="join-the-club">JOIN THE CLUB</div>
+                <a href="#"><div class="join-the-club">JOIN THE CLUB</div></a>
               </div>
             </div>
             <div class="background-border-2">
@@ -2401,7 +2414,7 @@ a {
               </p>
               <div class="link-13">
                 <div class="border-4"></div>
-                <div class="find-a-project">FIND A PROJECT</div>
+               <a href="{{ url_for('views.donations') }}"><div class="find-a-project">FIND A PROJECT</div></a>
               </div>
             </div>
             <div class="background-border-3">
@@ -2413,7 +2426,7 @@ a {
               </p>
               <div class="link-13">
                 <div class="border-4"></div>
-                <div class="find-a-project">FIND A PROJECT</div>
+                <a href="#"><div class="find-a-project">FIND A PROJECT</div></a>
               </div>
             </div>
             <div class="background-border-4">
@@ -2425,7 +2438,7 @@ a {
               </p>
               <div class="link-14">
                 <div class="border-4"></div>
-                <div class="find-a-project">FIND A PROJECT</div>
+                <a href="{{ url_for('views.donation') }}"><div class="find-a-project">FIND A PROJECT</div></a>
               </div>
             </div>
             <div class="background-border-5">
@@ -2433,13 +2446,13 @@ a {
               <div class="separator-2"></div>
               <div class="link-15">
                 <div class="border-5"></div>
-                <div class="edit-email">EDIT EMAIL PREFERENCES</div>
+                <a href="#"><div class="edit-email">EDIT EMAIL PREFERENCES</div></a>
               </div>
               <div class="link-16">
                 <div class="overlap-group-2">
                   <div class="border-6"></div>
                   <div class="link-paints-2"></div>
-                  <div class="unsubscribe">UNSUBSCRIBE</div>
+                  <a href="#"><div class="unsubscribe">UNSUBSCRIBE</div></a>
                 </div>
               </div>
             </div>
@@ -2452,25 +2465,25 @@ a {
                   8-20 characters long.
                 </p>
                 <div class="label-new-password">NEW PASSWORD</div>
-                <div class="input-3"></div>
+                <input type="text" class="input-3">
                 <div class="label-repeat-new">REPEAT NEW PASSWORD</div>
-                <div class="input-4"></div>
+                <input type="text" class="input-4">
                 <button class="button">
                   <div class="overlap-group-3">
                     <div class="background-5"></div>
                     <div class="border-7"></div>
                     <div class="button-paints"></div>
-                    <div class="save">SAVE</div>
+                    <a href="#"><div class="save">SAVE</div></a>
                   </div>
                 </button>
               </div>
             </div>
-            <div class="delete-my-account-wrapper"><div class="delete-my-account">DELETE MY ACCOUNT</div></div>
+            <a href="#"><div class="delete-my-account-wrapper"><div class="delete-my-account">DELETE MY ACCOUNT</div></div></a>
             <div class="overlap-wrapper">
               <div class="overlap-2">
                 <div class="border-6"></div>
                 <div class="link-paints-3"></div>
-                <div class="request-my-data">REQUEST MY DATA</div>
+                <a href="#"><div class="request-my-data">REQUEST MY DATA</div></a>
               </div>
             </div>
           </div>
@@ -2479,7 +2492,7 @@ a {
           <div class="background-6">
             <div class="container-5">
               <div class="group-3">
-                <img class="group-4" src="img/group-1-2.png" />
+              <img class="group-4" src="{{ url_for('static', filename='img/group-1-2.png') }}" />
                 <div class="text-wrapper-10">Secure Aid</div>
               </div>
               <p class="secure-aid-makes-it">

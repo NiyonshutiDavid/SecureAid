@@ -24,47 +24,38 @@ body {
   margin: 0px;
   height: 100%;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+/* Ensure that the maximum width of the container is 100% */
 .container {
-    width: 90%;
-    margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-/* Example: Styling for tablets and larger screens */
-@media (min-width: 768px) {
-    .container {
-        width: 80%;
-    }
-}
+/* Ensure that the maximum width of the container is 100% on all devices */
+@media (min-width: 576px) { .container {
+  max-width: 540px;
+}}
 
-/* Example: Styling for desktops and larger screens */
-@media (min-width: 1024px) {
-    .container {
-        width: 70%;
-    }
-}
+@media (min-width: 768px) { .container {
+  max-width: 720px;
+}}
 
-/* Example: Responsive images */
-img {
-    max-width: 100%;
-    height: auto;
-}
+@media (min-width: 992px) { .container {
+  max-width: 960px;
+}}
 
-/* Example: Responsive navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+@media (min-width: 1200px) { .container {
+  max-width: 1140px;
+}}
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-@media (max-width: 767px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
-    }
 }
 /* a blue color as a generic focus style */
 button:focus-visible {
@@ -374,7 +365,7 @@ a {
   height: 637px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-large-jpg.png);
+  background-image: url(/static/img/pict-featured-large-jpg.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -473,7 +464,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg.png);
+  background-image: url(/static/img/pict-featured-jpg.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -549,7 +540,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-1.png);
+  background-image: url(/static/img/pict-featured-jpg-1.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -616,7 +607,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-2.png);
+  background-image: url(/static/img/pict-featured-jpg-2.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -683,7 +674,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-3.png);
+  background-image: url(/static/img/pict-featured-jpg-3.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1845,7 +1836,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-4.png);
+  background-image: url(/static/img/pict-featured-jpg-4.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1856,7 +1847,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-5.png);
+  background-image: url(/static/img/pict-featured-jpg-5.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1923,7 +1914,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-6.png);
+  background-image: url(/static/img/pict-featured-jpg-6.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1990,7 +1981,7 @@ a {
   height: 318px;
   top: 0;
   left: 0;
-  background-image: url(./img/pict-featured-jpg-7.png);
+  background-image: url(/static/img/pict-featured-jpg-7.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -2242,7 +2233,7 @@ a {
   height: 229px;
   top: 4px;
   left: 9px;
-  background-image: url(./img/julybonusday-jpg.png);
+  background-image: url({{ url_for('static', filename='img/julybonusday-jpg.png') }});
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -2310,7 +2301,7 @@ a {
   height: 229px;
   top: 4px;
   left: 9px;
-  background-image: url(./img/goforgood-png.png);
+  background-image: url({{ url_for('static', filename='img/goforgood-png.png') }});
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -2360,7 +2351,7 @@ a {
   height: 229px;
   top: 4px;
   left: 9px;
-  background-image: url(./img/poweroffood-jpg.png);
+  background-image: url({{ url_for('static', filename='img/poweroffood-jpg.png') }});
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -3526,13 +3517,15 @@ a {
       <div class="div">
         <header class="header">
           <div class="group">
-		  <img class="img" src="img/group-1.png') }}" />
+            <a href="{{ url_for('views.landing_page') }}"><img class="img" src="{{ url_for('static', filename='img/group-1-1.png') }}" /></a>
+		          
             <div class="text-wrapper">Secure Aid</div>
           </div>
           <div class="overlap-group">
             <div class="container">
-		    <img class="search-orange-svg" src="{{ url_for('static', filename='Landing%20page/img/search-orange-svg.svg') }}" />
-              <div class="link"><a href="login_page.html" class="donate-to-projects">DONATE TO PROJECTS</a></div>
+		    <img class="search-orange-svg" src="{{ url_for('static', filename='img/search-orange-svg.svg') }}" />
+		    <img class="search-orange-svg" src="SecureAid\website\templates\Landing Page\img\search-orange-svg.svg" />
+              <div class="link"><a href="{{ url_for('views.login') }}" class="donate-to-projects">DONATE TO PROJECTS</a></div>
             </div>
             <div class="nav">
               <div class="div-wrapper"><a href="#" class="text-wrapper-2">About</a></div>
@@ -3543,7 +3536,7 @@ a {
             </div>
           </div>
           <div class="link-wrapper">
-            <div class="link-6"><a href="#" class="text-wrapper-7">Login</a></div>
+            <div class="link-6"><a href="{{ url_for('views.login')}}" class="text-wrapper-7">Login</a></div>
           </div>
         </header>
         <div class="overlap">
@@ -3601,23 +3594,23 @@ a {
         <div class="background-6">
           <div class="explore-projects">EXPLORE PROJECTS:</div>
           <div class="link-13"><a href="#" class="text-wrapper-12">Featured</a></div>
-          <div class="link-14"><a href="login_page.html" class="text-wrapper-13">Newest</a></div>
-          <div class="link-15"><a href="login_page.html" class="text-wrapper-14">Nearly Funded</a></div>
-          <div class="link-16"><a href="login_page.html" class="text-wrapper-15">Child Protection</a></div>
-          <div class="link-17"><a href="login_page.html" class="text-wrapper-16">Disaster Response</a></div>
-          <div class="link-18"><a href="login_page.html" class="text-wrapper-17">Education</div></a>
-          <div class="link-19"><a href="login_page.html" class="text-wrapper-18">Climate Action</a></div>
-          <div class="link-20"><a href="login_page.html" class="text-wrapper-19">Food Security</a></div>
-          <div class="link-21"><a href="login_page.html" class="text-wrapper-20">Gender Equality</a></div>
-          <div class="link-22"><a href="login_page.html" class="text-wrapper-21">Physical Health</a></div>
-          <div class="see-all-wrapper"><a href="login_page.html" class="see-all">SEE ALL ›</div></a>
+          <div class="link-14"><a href="{{ url_for('views.login')}}" class="text-wrapper-13">Newest</a></div>
+          <div class="link-15"><a href="{{ url_for('views.login')}}" class="text-wrapper-14">Nearly Funded</a></div>
+          <div class="link-16"><a href="{{ url_for('views.login')}}" class="text-wrapper-15">Child Protection</a></div>
+          <div class="link-17"><a href="{{ url_for('views.login')}}" class="text-wrapper-16">Disaster Response</a></div>
+          <div class="link-18"><a href="{{ url_for('views.login')}}" class="text-wrapper-17">Education</div></a>
+          <div class="link-19"><a href="{{ url_for('views.login')}}" class="text-wrapper-18">Climate Action</a></div>
+          <div class="link-20"><a href="{{ url_for('views.login')}}" class="text-wrapper-19">Food Security</a></div>
+          <div class="link-21"><a href="{{ url_for('views.login')}}" class="text-wrapper-20">Gender Equality</a></div>
+          <div class="link-22"><a href="{{ url_for('views.login')}}" class="text-wrapper-21">Physical Health</a></div>
+          <div class="see-all-wrapper"><a href="{{ url_for('views.login')}}" class="see-all">SEE ALL ›</div></a>
         </div>
         <div class="overlap-3">
           <div class="section">
             <div class="heading-how-it">How It Works</div>
             <div class="background-wrapper">
               <div class="background-7">
-                <img class="img-2" src="img/home-check-svg.svg" />
+                <img class="img-2" src="{{ url_for('static', filename='img/home-check-svg.svg') }}" />
                 <p class="nonprofits-around">
                   Nonprofits around the world apply and join<br />Secure Aid to access more funding, to<br />build new
                   skills, and to make important<br />connections.
@@ -3627,7 +3620,7 @@ a {
             </div>
             <div class="link-23">
               <div class="background-7">
-                <img class="img-2" src="img/home-gift-svg.svg" />
+                <img class="img-2" src="{{ url_for('static', filename='img/home-gift-svg.svg') }}" />
                 <p class="people-like-you-give">
                   People like you give to your favorite<br />projects; you feel great when you get<br />updates about
                   how your money is put to<br />work by trusted organizations.
@@ -3637,7 +3630,7 @@ a {
             </div>
             <div class="link-24">
               <div class="background-7">
-                <img class="img-2" src="img/home-buildings-svg.svg" />
+                <img class="img-2" src="{{ url_for('static', filename='img/home-buildings-svg.svg') }}" />
                 <p class="generous-companies">
                   Generous companies and their employees<br />further support high-impact projects with<br />donations
                   and grants, helping local<br />communities thrive.
@@ -3647,7 +3640,7 @@ a {
             </div>
             <div class="link-25">
               <div class="background-7">
-                <img class="img-2" src="img/home-globe-svg.svg" />
+                <img class="img-2" src="{{ url_for('static', filename='img/home-globe-svg.svg') }}" />
                 <p class="nonprofits-have-the">
                   Nonprofits have the funding they need to<br />listen to feedback and try out new ways to<br />work;
                   communities all over the globe get<br />more awesome!
@@ -3692,7 +3685,7 @@ a {
           </div>
           <div class="link-29">
             <div class="border-3"></div>
-            <div href="login_page.html" class="learn-more">LEARN MORE</div>
+            <a href="{{ url_for('views.login')}}"><div  class="learn-more">LEARN MORE</div></a>
           </div>
         </div>
         <div class="section-4">
@@ -3711,7 +3704,7 @@ a {
           </div>
           <div class="link-30">
             <div class="border-4"></div>
-            <div href="#" class="learn-more">LEARN MORE</div>
+            <a href="#"><div class="learn-more">LEARN MORE</div></a>
           </div>
           <div class="container-3">
             <div class="overlap-group-wrapper">
@@ -3753,7 +3746,7 @@ a {
               </div>
             </div>
           </div>
-          <img class="screenshot" src="img/screenshot-2024-07-21-163931-1.png" />
+          <img class="screenshot" src="{{ url_for('static', filename='img/screenshot-2024-07-21-163931-1.png') }}" />
         </div>
         <div class="section-5">
           <p class="we-ve-made-it">
@@ -3774,10 +3767,10 @@ a {
               <div class="overlap-group-3">
                 <div class="border-5"></div>
                 <div class="link-paints"></div>
-                <div href="#" class="view-all-companies">VIEW ALL COMPANIES</div>
+                <a href="#"><div class="view-all-companies">VIEW ALL COMPANIES</div></a>
               </div>
             </div>
-            <img class="image" src="img/image-1.png" />
+            <img class="image" src="{{ url_for('static', filename='img/image-1.png') }}" />
           </div>
         </div>
         <div class="section-6">
@@ -3791,7 +3784,7 @@ a {
                   >On July Bonus Day, $100+ gifts get a match.<br />Bigger gifts, bigger matches!</span
                 >
               </p>
-              <div href="login_page.html" class="give-now">GIVE NOW   ›</div>
+              <a href="{{ url_for('views.login')}}"><div class="give-now">GIVE NOW   ›</div></a>
             </div>
           </div>
           <div class="link-37">
@@ -3832,7 +3825,7 @@ a {
           <div class="background-10">
             <div class="container-5">
               <div class="group-2">
-                <img class="group-3" src="img/group-1-1.png" />
+                <a href="{{ url_for('views.landing_page') }}"><img class="group-3" src="{{ url_for('static', filename='img/group-1-1.png') }}" /></a>
                 <div class="text-wrapper-54">Secure Aid</div>
               </div>
               <p class="secure-aid-makes-it">

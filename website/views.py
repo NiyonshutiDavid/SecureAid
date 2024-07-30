@@ -9,45 +9,55 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def landing_page():
-    return render_template('Landing Page/index.html')
+    return render_template('Landing_page.html')
 
 @views.route('/signup', methods=['GET', 'POST'])
 def signup():
+    if current_user.is_authenticated:
+        return redirect(url_for('views.landing_page'))
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        new_user = User(first_name=form.first_name.data,
-                        last_name=form.last_name.data,
-                        email=form.email.data,
-                        password=hashed_password)
-
-        db.session.add(new_user)
+        user = User(
+            first_name=form.firstname.data,
+            last_name=form.lastname.data,
+            email=form.email.data,
+            password=hashed_password
+        )
+        db.session.add(user)
         db.session.commit()
-
-        flash('Registration successful! You can now log in.', 'success')
-        return redirect(url_for('views.login'))
-
-    return render_template('signup_page/index.html', form=form)
+        flash("Your account was successfully created, you can log in now", 'success')
+        return redirect(url_for("views.login"))
+    return render_template('signup_page.html', form=form)
 
 @views.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('views.landing_page'))
     form = LoginForm()
+    next_page = request.args.get("next")
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-
         if user and bcrypt.check_password_hash(user.password, form.password.data):
-            login_user(user)
-            flash('Login successful!', 'success')
+            login_user(user, remember=form.remember.data)
+            if next_page:
+                return redirect(next_page)
             return redirect(url_for('views.user_dashboard'))
         else:
-            flash('Login failed. Check your email and password.', 'danger')
-
-    return render_template('login_page/index.html', form=form)
+            flash("Login is unsuccessful. Check your email and password", 'warning')
+    return render_template('login_page.html', form=form)
 
 @views.route('/dashboard')
 @login_required
 def user_dashboard():
-    return render_template('user_dashboard/index.html', user=current_user)
+    """Display user dashboard when a user is authenticated"""
+    return render_template('user_dashboard.html', user=current_user)
+
+@views.route('/donate_to_project')
+@login_required
+def donate_to_project():
+    """Display user dashboard when a user clicks donate to a project"""
+    return render_template('Donation_page.html', user=current_user)
 
 @views.route('/donate', methods=['GET', 'POST'])
 @login_required
@@ -66,5 +76,4 @@ def donate():
         flash('Donation made successfully!', 'success')
         return redirect(url_for('views.donate'))
 
-    return render_template('my_donations_page.html', donations=donations)
-
+    return render_template('Donation_page.html', donations=donations)
