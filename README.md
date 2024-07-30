@@ -7,7 +7,10 @@ Features
 Getting Started
 Installation
 Usage
+Testing
+Deployment
 Contributing
+Code of Conduct
 License
 Contact
 About Secure Aid
@@ -59,6 +62,31 @@ Open your browser and navigate to http://localhost:5000.
 
 Explore the features and functionality of Secure Aid.
 
+Testing
+To run tests for the application, use the following command:
+
+bash
+Copy code
+pytest
+This will discover and run all the tests in the tests directory.
+
+Deployment
+To deploy the application, follow these steps:
+
+Ensure all dependencies are installed:
+
+bash
+Copy code
+pip install -r requirements.txt
+Set up environment variables for production (e.g., database URI, secret keys).
+
+Use a WSGI server like Gunicorn to serve the application:
+
+bash
+Copy code
+gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
+Configure a web server like Nginx to proxy requests to the Gunicorn server.
+
 Contributing
 We welcome contributions to Secure Aid! To contribute:
 
@@ -76,6 +104,9 @@ bash
 Copy code
 git push origin feature/YourFeatureName
 Open a pull request.
+Code of Conduct
+Please adhere to the Code of Conduct in all interactions with the project.
+
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
