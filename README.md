@@ -29,26 +29,32 @@ Follow these instructions to set up Secure Aid on your local machine for develop
 Prerequisites
 Ensure you have the following installed:
 
-Node.js
-npm
+Python
+pip
 Installation
 Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/NiyonshutiDavid/SecureAid.git
+git clone https://github.com/YourUsername/SecureAid.git
 cd SecureAid
+Create a virtual environment:
+
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 Install the dependencies:
 
 bash
 Copy code
-npm install
+pip install -r requirements.txt
 Usage
 Start the development server:
 
 bash
 Copy code
-npm start
+flask run
 Open your browser and navigate to http://localhost:5000.
 
 Explore the features and functionality of Secure Aid.
@@ -70,16 +76,11 @@ bash
 Copy code
 git push origin feature/YourFeatureName
 Open a pull request.
-
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 Contact
 For any inquiries or issues, please contact us at:
 
-Email:
-
-d.niyonshut@alustudent.com
-n.abeasi@alustudent.com
-n.iyabikoze@alustudent.com
-n.marizani@alustudent.com
-y.molumo@alustudent.com
+Email: support@secureaid.org
 GitHub: Secure Aid
