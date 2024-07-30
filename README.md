@@ -7,10 +7,7 @@ Features
 Getting Started
 Installation
 Usage
-Testing
-Deployment
 Contributing
-Code of Conduct
 License
 Contact
 About Secure Aid
@@ -32,60 +29,29 @@ Follow these instructions to set up Secure Aid on your local machine for develop
 Prerequisites
 Ensure you have the following installed:
 
-Python
-pip
+Node.js
+npm
 Installation
 Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/YourUsername/SecureAid.git
+git clone https://github.com/NiyonshutiDavid/SecureAid.git
 cd SecureAid
-Create a virtual environment:
-
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 Install the dependencies:
 
 bash
 Copy code
-pip install -r requirements.txt
+npm install
 Usage
 Start the development server:
 
 bash
 Copy code
-flask run
+npm start
 Open your browser and navigate to http://localhost:5000.
 
 Explore the features and functionality of Secure Aid.
-
-Testing
-To run tests for the application, use the following command:
-
-bash
-Copy code
-pytest
-This will discover and run all the tests in the tests directory.
-
-Deployment
-To deploy the application, follow these steps:
-
-Ensure all dependencies are installed:
-
-bash
-Copy code
-pip install -r requirements.txt
-Set up environment variables for production (e.g., database URI, secret keys).
-
-Use a WSGI server like Gunicorn to serve the application:
-
-bash
-Copy code
-gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
-Configure a web server like Nginx to proxy requests to the Gunicorn server.
 
 Contributing
 We welcome contributions to Secure Aid! To contribute:
@@ -104,22 +70,16 @@ bash
 Copy code
 git push origin feature/YourFeatureName
 Open a pull request.
-Code of Conduct
-Please adhere to the Code of Conduct in all interactions with the project.
-
 
 
 Contact
 For any inquiries or issues, please contact us at:
 
-Email: 
--d.niyonshut@alustudent.com
--n.abeasi@alustudent.com
--n.iyabikoze@alustudent.com
--n.marizani@alustudent.com
--y.molumo@alustudent.com
+Email:
 
+d.niyonshut@alustudent.com
+n.abeasi@alustudent.com
+n.iyabikoze@alustudent.com
+n.marizani@alustudent.com
+y.molumo@alustudent.com
 GitHub: Secure Aid
-
-
-
