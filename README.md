@@ -120,19 +120,17 @@ We welcome contributions to Secure Aid! To contribute:
 
 Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions with the project.
 
-
 ## Contact
-
 For any inquiries or issues, please contact us at:
-Email:
--d.niyonshut@alustudent.com
--n.abeasi@alustudent.com
--n.iyabikoze@alustudent.com
--n.marizani@alustudent.com
--y.molumo@alustudent.com
 
+- Email:
+    - d.niyonshut@alustudent.com
+    - n.abeasi@alustudent.com
+    - n.iyabikoze@alustudent.com
+    - n.marizani@alustudent.com
+    - y.molumo@alustudent.com
 - GitHub: [Secure Aid](https://github.com/NiyonshutiDavid/SecureAid)
 
 ---
 
-Feel free to customize this README file further to better fit your project's needs and specifics.
+THANK YOU
