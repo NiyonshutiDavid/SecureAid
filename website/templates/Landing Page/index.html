@@ -2,22 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Landing%20page/globals.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Landing%20page/styleguide.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Landing%20page/style.css') }}" />
   </head>
   <body>
     <div class="landing-page">
       <div class="div">
         <header class="header">
           <div class="group">
-            <img class="img" src="img/group-1.png" />
+		  <img class="img" src="{{ url_for('static', filename='Lanign page/img/group-1.png') }}" />
             <div class="text-wrapper">Secure Aid</div>
           </div>
           <div class="overlap-group">
             <div class="container">
-              <img class="search-orange-svg" src="img/search-orange-svg.svg" />
-              <div class="link"><div class="donate-to-projects">DONATE TO PROJECTS</div></div>
+		    <img class="search-orange-svg" src="{{ url_for('static', filename='Landing page/img/search-orange-svg.svg') }}" />
+              <div class="link"><a href="login_page/index.html" class="donate-to-projects">DONATE TO PROJECTS</a></div>
             </div>
             <div class="nav">
               <div class="div-wrapper"><div class="text-wrapper-2">About</div></div>
