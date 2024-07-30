@@ -36,8 +36,9 @@ Follow these instructions to set up Secure Aid on your local machine for develop
 ### Prerequisites
 
 Ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
+
+Python
+pip
 
 ### Installation
 
@@ -47,19 +48,24 @@ Ensure you have the following installed:
    cd SecureAid
    ```
 
-2. Install the dependencies:
+2.Create a virtual environment:
+    ```bash
+     python3 -m venv venv
+     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+         ```
+3. Install the dependencies:
    ```bash
-   npm install
+ pip install -r requirements.txt
    ```
 
 ## Usage
 
 1. Start the development server:
    ```bash
-   npm start
+   flask run
    ```
 
-2. Open your browser and navigate to `http://localhost:3000`.
+2. Open your browser and navigate to `http://localhost:5000`.
 
 3. Explore the features and functionality of Secure Aid.
 
@@ -93,8 +99,8 @@ For any inquiries or issues, please contact us at:
 - n.iyabikoze@alustudent.com
 - n.marizani@alustudent.com
 - y.molumo@alustudent.com
-- GitHub: [Secure Aid](https://github.com/YourUsername/SecureAid)
+- GitHub: [Secure Aid](https://github.com/NiyonshutiDavid/SecureAid)
 
 ---
 
-
+THANK YOU 
