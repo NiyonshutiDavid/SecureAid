@@ -1,7 +1,3 @@
-Absolutely, here's the README with all code snippets clearly separated for easy copying:
-
----
-
 # Secure Aid
 
 Welcome to Secure Aid! This web application is dedicated to increasing awareness of the harmful effects of war and facilitating donations to help those in unstable countries. Our mission is to make the process of sending donations easier and more secure, ensuring that aid reaches those who need it most.
