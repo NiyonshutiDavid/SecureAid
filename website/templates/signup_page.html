@@ -1908,19 +1908,19 @@ a {
         <form class="form" action="{{ url_for('views.signup') }}" method="post">
           {{ form.hidden_tag() }}
           <div class="label-first-name">FIRST NAME</div>
-          <input type="text" id="first-name" name="first-name" class="input" required />
-          {{ form.firstname(class="input") }}
+          <input type="text" id="first-name" name="first-name" class="input"  />
+          {{ form.first_name(class="input") }}
           <div class="label-last-name">LAST NAME</div>
-          <input type="text" id="last-name" name="last-name" class="input-2" required />
-          {{ form.lastname(class="input-2") }}
+          <input type="text" id="last-name" name="last-name" class="input-2"  />
+          {{ form.last_name(class="input-2") }}
           <div class="label-email">EMAIL</div>
-          <input type="email" id="email" name="email" class="input-3" required />
+          <input type="email" id="email" name="email" class="input-3" />
           {{ form.email(class="input-3") }}
           <div class="label-password">PASSWORD</div>
-          <input type="password" id="password" name="password" class="input-4" required />
+          <input type="password" id="password" name="password" class="input-4"  />
           {{ form.password(class="input-4") }}
           <div class="label-confirm">CONFIRM PASSWORD</div>
-          <input type="password" id="confirm-password" name="confirm-password" class="input-5" required />
+          <input type="password" id="confirm-password" name="confirm-password" class="input-5" />
           {{ form.confirm_password(class="input-5") }}
           <div class="label">
             <input type="checkbox" id="newsletter" name="newsletter" class="checkbox-input" />
@@ -1955,7 +1955,7 @@ a {
             <div class="overlap-4">
               <div class="border"></div>
               <div class="button-paints"></div>
-              <a href="{{ url_for('views.user_dashboard') }}"><div class="sign-up">SIGN UP</div></a>
+              <div class="sign-up">SIGN UP</div>
             </div>
           </button>
         </form>

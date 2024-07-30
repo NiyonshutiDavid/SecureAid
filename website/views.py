@@ -19,15 +19,15 @@ def signup():
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         user = User(
-            first_name=form.firstname.data,
-            last_name=form.lastname.data,
+            first_name=form.first_name.data,
+            last_name=form.last_name.data,
             email=form.email.data,
             password=hashed_password
         )
         db.session.add(user)
         db.session.commit()
         flash("Your account was successfully created, you can log in now", 'success')
-        return redirect(url_for("views.login"))
+        return redirect(url_for('views.login'))
     return render_template('signup_page.html', form=form)
 
 @views.route('/login', methods=['GET', 'POST'])
@@ -48,19 +48,16 @@ def login():
     return render_template('login_page.html', form=form)
 
 @views.route('/dashboard')
-@login_required
 def user_dashboard():
     """Display user dashboard when a user is authenticated"""
     return render_template('user_dashboard.html', user=current_user)
 
 @views.route('/donate_to_project')
-@login_required
-def donate_to_project():
+def donation():
     """Display user dashboard when a user clicks donate to a project"""
     return render_template('Donation_page.html', user=current_user)
 
 @views.route('/donate', methods=['GET', 'POST'])
-@login_required
 def donate():
     donations = Donations.query.all()  # Fetch all donations to display
     if request.method == 'POST':
