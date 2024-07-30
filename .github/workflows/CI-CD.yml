@@ -24,8 +24,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t niyonshutidavid/ecoapp:latest .
-        docker push niyonshutidavid/ecoapp:latest
+        docker build -t niyonshutidavid/secureaid:latest .
+        docker push niyonshutidavid/secureaid:latest
 
   deploy:
     needs: build
@@ -47,11 +47,11 @@ jobs:
     - name: Deploy to web server
       run: |
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@54.208.5.102 '
-          CONTAINER_ID=$(sudo docker ps --filter ancestor=niyonshutidavid/ecoapp:latest -q)
+          CONTAINER_ID=$(sudo docker ps --filter ancestor=niyonshutidavid/secureaid:latest -q)
           if [ ! -z "$CONTAINER_ID" ]; then
             sudo docker stop $CONTAINER_ID
             sudo docker rm $CONTAINER_ID
           fi
-          sudo docker pull niyonshutidavid/ecoapp:latest
-          sudo docker run -d -p 5000:5000 niyonshutidavid/ecoapp:latest
+          sudo docker pull niyonshutidavid/secureaid:latest
+          sudo docker run -d -p 5000:5000 niyonshutidavid/secureaid:latest
         '
