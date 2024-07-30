@@ -53,6 +53,7 @@ pip
      python3 -m venv venv
      source venv/bin/activate  # On Windows use `venv\Scripts\activate`
          ```
+
 3. Install the dependencies:
    ```bash
  pip install -r requirements.txt
