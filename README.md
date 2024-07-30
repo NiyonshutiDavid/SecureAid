@@ -1,4 +1,3 @@
-
 Secure Aid
 Welcome to Secure Aid! This web application is dedicated to increasing awareness of the harmful effects of war and facilitating donations to help those in unstable countries. Our mission is to make the process of sending donations easier and more secure, ensuring that aid reaches those who need it most.
 
@@ -14,95 +13,113 @@ Contributing
 Code of Conduct
 License
 Contact
-## About Secure Aid
-
+About Secure Aid
 Secure Aid is an innovative web application designed to:
-- Raise awareness about the devastating effects of war on communities.
-- Provide a secure platform for donations to reach people in crisis zones.
-- Ensure transparency and accountability in the donation process.
 
-## Features
-
-- **User-Friendly Interface**: Easy navigation and minimalistic design.
-- **Secure Donations**: Ensures that donations are safely processed and delivered.
-- **Real-Time Updates**: Provides updates on the impact of your donations.
-- **Awareness Campaigns**: Informative content about the effects of war and ongoing crises.
-- **Multiple Payment Options**: Supports various payment methods for convenience.
-- **Community Engagement**: Connects donors with stories and updates from the field.
-
-## Getting Started
-
+Raise awareness about the devastating effects of war on communities.
+Provide a secure platform for donations to reach people in crisis zones.
+Ensure transparency and accountability in the donation process.
+Features
+User-Friendly Interface: Easy navigation and minimalistic design.
+Secure Donations: Ensures that donations are safely processed and delivered.
+Real-Time Updates: Provides updates on the impact of your donations.
+Awareness Campaigns: Informative content about the effects of war and ongoing crises.
+Multiple Payment Options: Supports various payment methods for convenience.
+Community Engagement: Connects donors with stories and updates from the field.
+Getting Started
 Follow these instructions to set up Secure Aid on your local machine for development and testing purposes.
 
-### Prerequisites
-
+Prerequisites
 Ensure you have the following installed:
 
 Python
 pip
+Installation
+Clone the repository:
 
-### Installation
+bash
+Copy code
+git clone https://github.com/YourUsername/SecureAid.git
+cd SecureAid
+Create a virtual environment:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/NiyonshutiDavid/SecureAid.git
-   cd SecureAid
-   ```
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+Install the dependencies:
 
-2.Create a virtual environment:
-    ```bash
-     python3 -m venv venv
-     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-         ```
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Start the development server:
 
-3. Install the dependencies:
-   ```bash
- pip install -r requirements.txt
-   ```
+bash
+Copy code
+flask run
+Open your browser and navigate to http://localhost:5000.
 
-## Usage
+Explore the features and functionality of Secure Aid.
 
-1. Start the development server:
-   ```bash
-   flask run
-   ```
+Testing
+To run tests for the application, use the following command:
 
-2. Open your browser and navigate to `http://localhost:5000`.
+bash
+Copy code
+pytest
+This will discover and run all the tests in the tests directory.
 
-3. Explore the features and functionality of Secure Aid.
+Deployment
+To deploy the application, follow these steps:
 
-## Contributing
+Ensure all dependencies are installed:
 
+bash
+Copy code
+pip install -r requirements.txt
+Set up environment variables for production (e.g., database URI, secret keys).
+
+Use a WSGI server like Gunicorn to serve the application:
+
+bash
+Copy code
+gunicorn -w 4 -b 0.0.0.0:8000 wsgi:app
+Configure a web server like Nginx to proxy requests to the Gunicorn server.
+
+Contributing
 We welcome contributions to Secure Aid! To contribute:
 
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/YourFeatureName
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/YourFeatureName
-   ```
-5. Open a pull request.
+Fork the repository.
+Create a new branch:
+bash
+Copy code
+git checkout -b feature/YourFeatureName
+Make your changes and commit them:
+bash
+Copy code
+git commit -m 'Add some feature'
+Push to the branch:
+bash
+Copy code
+git push origin feature/YourFeatureName
+Open a pull request.
+Code of Conduct
+Please adhere to the Code of Conduct in all interactions with the project.
 
-## Contact
 
+
+Contact
 For any inquiries or issues, please contact us at:
 
- Email:
- 
-- d.niyonshut@alustudent.com
-- n.abeasi@alustudent.com
-- n.iyabikoze@alustudent.com
-- n.marizani@alustudent.com
-- y.molumo@alustudent.com
-- GitHub: [Secure Aid](https://github.com/NiyonshutiDavid/SecureAid)
+Email: 
+-d.niyonshut@alustudent.com
+-n.abeasi@alustudent.com
+-n.iyabikoze@alustudent.com
+-n.marizani@alustudent.com
+-y.molumo@alustudent.com
 
----
+GitHub: Secure Aid
 
-THANK YOU 
+
+
