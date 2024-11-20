@@ -1,6 +1,6 @@
 # Secure Aid
 
-Welcome to Secure Aid! This web application is dedicated to increasing awareness of the harmful effects of war and facilitating donations to help those in unstable countries. Our mission is to make the process of sending donations easier and more secure, ensuring that aid reaches those who need it most.
+Welcome to Secure Aid, This web application is dedicated to increasing awareness of the harmful effects of war and facilitating donations to help those in unstable countries. Our mission is to make the process of sending donations easier and more secure, ensuring that aid reaches those who need it most.
 
 ## Table of Contents
 
